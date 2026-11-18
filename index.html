@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thumbnail Downloader – Save any YouTube thumbnail</title>
+  <meta name="description" content="Paste a YouTube link and download its thumbnail in HD, SD, HQ, MQ or default size. Free, no sign-up.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖼️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header class="top">
+      <span class="brand">Thumbnail Downloader</span>
+    </header>
+
+    <section class="hero">
+      <h1>Save any YouTube thumbnail.</h1>
+      <p class="lead">Paste a video link. Pick a size. Download the image.</p>
+
+      <form id="form" class="finder" autocomplete="off" novalidate>
+        <label for="url" class="sr">YouTube video link</label>
+        <input id="url" type="text" inputmode="url" placeholder="https://www.youtube.com/watch?v=…" spellcheck="false">
+        <button type="submit">Get thumbnail</button>
+        <button type="button" id="paste" class="ghost" hidden>Paste</button>
+      </form>
+      <p id="error" class="error" role="alert" hidden></p>
+    </section>
+
+    <section id="result" class="result" hidden>
+      <div class="frame" id="frame">
+        <i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i>
+        <img id="preview" alt="Video thumbnail preview">
+      </div>
+
+      <ul id="sizes" class="sizes"></ul>
+      <p class="note">Not every video has an HD (1280×720) thumbnail. Sizes that don’t exist are hidden.</p>
+    </section>
+
+    <footer class="foot">
+      <p>Works with watch links, youtu.be, Shorts, live and embed URLs, or just the 11-character video ID. Thumbnails belong to their creators – use them with permission.</p>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
